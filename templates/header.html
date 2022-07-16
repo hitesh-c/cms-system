@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+
+    <!-- FONT AWESOME -->
+    <script
+      src="https://kit.fontawesome.com/ec67052a9d.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static',filename='apple-touch-icon.png')}}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static',filename='favicon-32x32.png')}}">
+<link rel="icon" type="image/png"  href="{{ url_for('static',filename='favicon.ico')}}">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+    <link rel="icon" href="{{ url_for('static',filename='css/globals.css')}}" type="image/x-icon" />
+    
+    <link href="{{ url_for('static',filename='css/globals.css')}}" rel="stylesheet" />
+    <link href="{{ url_for('static',filename='css/complain.css')}}" rel="stylesheet" />
+    <link href="{{ url_for('static',filename='css/footer.css')}}" rel="stylesheet" />
+    <link href="{{ url_for('static',filename='css/header.css')}}" rel="stylesheet" />
+    <link href="{{ url_for('static',filename='css/admin.css')}}" rel="stylesheet" />
+    <link href="{{ url_for('static',filename='css/home.css')}}" rel="stylesheet" />
+
+    <title>Complaint Management system</title>
+
+    <!--        NAVBAR     -->
+    <nav class="navbar navbar-expand-lg fixed-top py-2">
+      <div class="container" id="navu">
+        <a href="#" class="navbar-brand">UNIVERSITY INSTITUTE OF ENGINEERING AND TECHNOLOGY</a>
+
+        <button
+          id="custombutton"
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler navbar-toggler-right"
+        >
+          <i class="fas fa-bars" style="color: white"></i>
+        </button>
+
+        <div id="navbarSupportedContent" class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a href="../" class="nav-link"
+                >HOME<span class="sr-only">(current)</span></a
+              >
+            </li>
+
+            <li class="nav-item menu">
+              <a href="../login" class="nav-link">LOGIN</a>
+              
+            </li>
+
+            <li class="nav-item menu">
+              <a href="#" class="nav-link">ABOUT UIET  </a>
+              <ul class="sub-menu">
+                <li><a href="https://uiet.puchd.ac.in/">Official Website</a></li>
+                
+               
+              </ul>
+            </li>
+                 <!-- made by Hitesh 198046-->
+                
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </head>
+  <body>
+    <div style="min-height: 150vh">

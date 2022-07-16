@@ -1,0 +1,126 @@
+{% include "dashlayout.html" %}
+
+  <div class="content-container">
+
+    <div class="container-fluid">
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron" style="align-items: center;">
+    <h3 style="text-align: center;">Complain ID : {{currcomplaint.id}}</h3>
+        <h5 style="text-align: center;">Subject : {{currcomplaint.subject}}</h5> 
+        <h5 style="text-align: center; color: #0E86D4;">Status:
+          {% if currcomplaint.status<0 %}
+          Rejected
+          {% elif currcomplaint.status==1 %}
+          Recieved
+          {% elif currcomplaint.status==2 %}
+          Approved. Will be processed soon.
+          {% elif currcomplaint.status==3 %}
+          In Process
+          {% else %}
+          Resolved
+          {% endif %}
+           </h5> 
+
+
+
+
+        <div class="padding" >
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Category</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                
+                <td>{{currcomplaint.compdate}}</td>
+                <td>{{category}}</td>
+                <td>{{currcomplaint.name}}</td>
+                <td>{{currcomplaint.email}}</td>
+                <td>{{currcomplaint.phone}}</td>
+
+
+              </tr>
+              
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="padding">
+
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+
+                <th scope="col">Complaint Details</th>
+                <th scope="col">Status</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+               
+                <td>{{currcomplaint.description}}</td>
+                <td>
+                  {% if currcomplaint.status<0 %}
+                  Rejected
+                  {% elif currcomplaint.status==1 %}
+                  Recieved
+                  {% elif currcomplaint.status==2 %}
+                  Approved
+                  {% elif currcomplaint.status==3 %}
+                  In Process
+                  {% else %}
+                  Resolved
+                  {% endif %}
+                </td>
+
+              </tr>
+             
+             
+            </tbody>
+          </table>
+
+        </div>
+        <form id="statusform" action="../update/{{currcomplaint.id}}" method="POST" enctype="multipart/form-data">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Update status</label>
+          </div>
+          <select class="custom-select" id="inputGroupSelect01" required name="status">
+            
+            {% if currcomplaint.status<0 %}
+
+            {% elif currcomplaint.status==1 %}
+            <option value="2">Approved</option>
+            <option value="-1">Rejected</option>
+            {% elif currcomplaint.status==2 %}
+            <option value="3">In process</option>
+            {% elif currcomplaint.status==3 %}
+            <option value="4">Resolved</option>
+            {% else %}
+            {% endif %}
+          </select>
+        </div>
+        <div  style="display: flex; flex-direction: column; align-items: center;">
+         <div> <button class="btn btn-lg btn-warning butons three-btns-alignment" style="min-width: 100px;" onsubmit="">SAVE</button> </div>
+         
+        </div>
+
+      </form>
+
+
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

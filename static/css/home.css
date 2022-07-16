@@ -1,0 +1,172 @@
+.padding
+{
+  padding: 20px;
+}
+
+form.trackid input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.trackid button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.trackid button:hover {
+  background: #0b7dda;
+}
+
+form.trackid::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.headlines a:hover {
+  color: grey;
+}
+
+.get-involved-card {
+  padding: 40px;
+}
+.get-involved-card a {
+  color: #343a40;
+}
+.get-involved-card .card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.5s;
+}
+.get-involved-card .card-inner .card-front,
+.get-involved-card .card-inner .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.get-involved-card .card-inner .card-back {
+  opacity: 0;
+}
+.get-involved-card .separator {
+  min-height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  transition: transform 0.4s;
+}
+.get-involved-card .separator:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s;
+  background-color: #2f92bb;
+  color: white;
+}
+.get-involved-card .separator:hover .card-front {
+  opacity: 0;
+}
+.get-involved-card .separator:hover .card-back {
+  opacity: 1;
+}
+
+.whatwedo {
+  background: #fff;
+  padding: 40px;
+}
+
+
+.whatwedo .separator {
+  min-height: 270px;
+}
+.whatwedo .whatwedocard {
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+  background-color: transparent;
+}
+.whatwedo .card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.whatwedo .card-inner .card-front,
+.whatwedo .card-inner .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+.whatwedo .card-inner .card-back {
+  transform: rotateY(180deg);
+}
+.whatwedo .whatwedo-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.youtube {
+  background-image: url("images/ybg.jpg");
+  background-color: black;
+  padding: 40px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  background: #000000;
+}
+
+.box {
+  position: relative;
+  width: 300px;
+  height: 150px;
+  transform-style: preserve-3d;
+  animation: animate 30s linear infinite;
+}
+.box .gallery-pics {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+}
+.box .gallery-pics img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 160px;
+  object-fit: cover;
+  -webkit-box-reflect: below 8px -webkit-gradient(linear, right top, right bottom, from(transparent), color-stop(40%, transparent), to(rgba(255, 255, 255, 0.1)));
+}
+
+@keyframes animate {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}

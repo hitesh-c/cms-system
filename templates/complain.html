@@ -1,0 +1,131 @@
+{% include "header.html" %}
+
+<div class="padding" style="align-items: center;">
+ <div> </div>
+</div>
+
+
+<section>
+  <div>
+    <div class="bg-contact100">
+      <div class="container-contact100">
+        <div class="wrap-contact100">
+        
+              <div class="padding" style="display: flex; flex-direction: column; align-items: center; padding-left: 100px;">
+                <h2 class="padding"> File your complaint</h2>
+
+                <img src="{{ url_for('static',filename='complain.jpg')}}" alt="" style="height: 300px;">
+
+            <a href="../"  style="min-width: 240px;" class="btn btn-lg btn-warning butons three-btns-alignment" >Back to home</a>
+      </div>
+
+          <form class="contact100-form validate-form" action="../complain" method="POST" enctype="multipart/form-data">
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Category</label>
+              </div>
+              <select class="custom-select" id="inputGroupSelect01" name="category">
+                <option value="1">Complaint regarding Fees</option>
+                <option value="2">Complaint regarding Library</option>
+                <option value="3">Complaint regarding Academic Staff</option>
+                <option value="4">Complaint regarding Non-Academic Staff</option>
+                <option value="5">Complaint regarding Academics</option>
+                <option value="6">Complaint related to Student/Senior</option>
+                <option value="7" selected>Other Complaint</option>
+              </select>
+            </div>
+
+            <div
+              class="wrap-input100 validate-input"
+              data-validate="Name is required"
+            >
+              <input
+                class="input100"
+                type="text"
+                name="name"
+                placeholder="Name" required
+              />
+              <span class="focus-input100"></span>
+              <span class="symbol-input100">
+                <i class="fa fa-user" aria-hidden="true"></i>
+              </span>
+            </div>
+
+
+
+            <div
+              class="wrap-input100 validate-input"
+              
+            >
+              <input
+                class="input100"
+                type="text"
+                name="subject"
+                placeholder="Enter Subject" required
+              />
+              <span class="focus-input100"></span>
+              <span class="symbol-input100">
+                <i class="fa fa-pen" aria-hidden="true"></i>
+              </span>
+            </div>
+
+
+            <div
+              class="wrap-input100 validate-input"
+              data-validate="Valid email is required: ex@abc.xyz"
+            >
+              <input
+                class="input100"
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
+              <span class="focus-input100"></span>
+              <span class="symbol-input100">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+              </span>
+            </div>
+            <div
+            class="wrap-input100 validate-input"
+            data-validate="Valid email is required: ex@abc.xyz"
+          >
+            <input
+              class="input100"
+              type="text"
+              name="number"
+              placeholder="Phone number"
+              required
+            />
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+            </span>
+          </div>
+
+
+            <div
+              class="wrap-input100 validate-input"
+              data-validate="Message is required"
+            >
+              <textarea
+                class="input100"
+                name="message"
+                placeholder=" Enter your Complain"
+                required
+              ></textarea>
+              <span class="focus-input100"></span>
+            </div>
+
+            <div class="container-contact100-form-btn">
+              <button class="contact100-form-btn" onsubmit="window.alert( )">SUBMIT</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "footer.html" %}

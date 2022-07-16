@@ -1,0 +1,75 @@
+{% include "dashlayout.html" %}
+
+      <div class="content-container">
+      
+        <div class="container-fluid">
+      
+          <!-- Main component for a primary marketing message or call to action -->
+          <div class="jumbotron"  style="align-items: center;">
+            <h1>Dashboard</h1>
+            
+            <div class ="padding" >
+
+                <form class="trackid" style="margin:auto;max-width:300px" action="../dashboard" method="POST" enctype="multipart/form-data">
+                  <input type="text" placeholder="Search Here" name="search3">
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </form> </div>
+
+
+            <div class ="padding">
+                <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Date</th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Subject</th>
+              <th scope="col">Status</th>
+              <th scope="col">Details</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+
+            {% for complaint in complaints %}
+            <tr>
+              <th scope="row">{{complaint.id}}</th>
+              <td>{{complaint.compdate}}</td>
+              <td>{{complaint.name}}</td>
+              <td>{{complaint.email}}</td>
+              <td>{{complaint.phone}}</td>
+              <td>{{complaint.subject}}</td>
+              <td>
+
+                {% if complaint.status<0 %}
+                Rejected
+                {% elif complaint.status==1 %}
+                Recieved
+                {% elif complaint.status==2 %}
+                Approved
+                {% elif complaint.status==3 %}
+                In Process
+                {% else %}
+                Resolved
+                {% endif %}
+
+              </td>
+              <td><a href="../update/{{complaint.id}}" class="btn btn-info">Info</a></td>
+              
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        
+       </div>
+
+
+          </div>
+      
+        </div>
+      </div>
+</body>
+
+</html>

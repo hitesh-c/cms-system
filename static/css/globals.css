@@ -1,0 +1,68 @@
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: grey;
+}
+
+.pagehead-font {
+  font-family: Nexa Bold;
+  font-size: 40px;
+}
+
+.largetext-font {
+  font-family: Nexa bold;
+  font-size: 20px;
+}
+
+.smalltext-font {
+  font-size: 16px;
+  font-family: Nunito Sans Regular;
+}
+
+.separator {
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.mx-10 {
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+.mx-6 {
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
+.my-7 {
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+}
+
+.headings {
+  text-align: center;
+  color: #343a40;
+  font-family: Nexa bold;
+  display: inline-block;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+.headings:after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  bottom: 0;
+  left: 25%;
+  border-bottom: 4px solid #810000;
+}

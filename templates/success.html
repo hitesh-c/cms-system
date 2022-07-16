@@ -1,0 +1,80 @@
+{% include "header.html" %}
+
+<div class="padding" style="align-items: center;">
+ <div><p></p> </div>
+</div>
+
+
+   
+
+    <div class="" style="display: flex; flex-direction: column; align-items: center;">
+       <!-- <div class="text-center btn_container" style="margin-top:30px;display: flex; flex-direction: column;"> -->
+        <div class="padding"><h2>Complaint registered Successfully</h2></div>
+    <div class="padding">Your Complaint ID is : {{id}}. Keep this for future reference!<br> You can also track your complaint-ID on homepage</div> 
+
+
+       <div class="padding">
+         
+         <a href="../" style="min-width: 240px;" class="btn btn-lg btn-warning butons three-btns-alignment" >Back to home</a>
+       </div>
+   
+       <script type="text/javascript">function showDiv() {
+           document.getElementById('trackidhidden').style.display = "block";
+         }</script>
+         <script type="text/javascript">function hideDiv() {
+           document.getElementById('trackidhidden').style.display = "none";
+         }</script>
+   
+   
+       <div class ="padding" id="trackidhidden" style="display: none;">
+   
+         <form class="trackid" action="" style="margin:auto;max-width:300px">
+           <input type="text" placeholder="Enter Complaint-ID" name="search2">
+           <button type="submit"><i class="fa fa-search"></i></button>
+         </form>
+          
+         <p class="padding"> Sorry, No records found!</p>
+         <div class ="padding">
+                 <table class="table">
+           <thead class="thead-dark">
+             <tr>
+               <th scope="col">Sno.</th>
+               <th scope="col">Details</th>
+               <th scope="col">Status</th>
+               <th scope="col">Remarks</th>
+               
+             </tr>
+           </thead>
+           <tbody>
+             <tr>
+               <th scope="row">1</th>
+               <td>Mark</td>
+               <td>Otto</td>
+               
+             </tr>
+             <tr>
+               <th scope="row">2</th>
+               <td>Jacob</td>
+               <td>Thornton</td>
+              
+             </tr>
+             <tr>
+               <th scope="row">3</th>
+               <td>Larry</td>
+               <td>the Bird</td>
+              
+             </tr>
+           </tbody>
+         </table>
+         
+        </div>
+        <div class="padding">
+         <input type="button" style="min-width: 100px;"  name="answer" value="Hide" onclick="hideDiv()" />
+   
+   
+       </div>
+   
+       </div>
+
+
+{% include "footer.html" %}

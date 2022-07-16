@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="{{ url_for('static',filename='css/dashboard.css')}}" rel="stylesheet" />
+    <link href="{{ url_for('static',filename='css/complain.css')}}" rel="stylesheet" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static',filename='apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static',filename='favicon-32x32.png')}}">
+    <link rel="icon" type="image/png"  href="{{ url_for('static',filename='favicon.ico')}}">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/ec67052a9d.js" crossorigin="anonymous"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+        crossorigin="anonymous"></script>
+    
+ </head>
+
+<body>
+    <div class="sidebar-container">
+        <div class="sidebar-logo">
+          ADMIN PANEL
+        </div>
+        <ul class="sidebar-navigation">
+          <li class="header">Complaint Management System, UIET-PU</li>
+        
+          <li>
+            <a href="../dashboard">
+              <i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard
+            </a>
+          </li>
+          <li class="header">More options</li>
+         
+          <li>
+            <a href="../logout">
+              <i class="fa fa-sign-out" aria-hidden="true"></i> Log out
+            </a>
+          </li>
+          <li>
+            <a href="../info">
+              <i class="fa fa-info-circle" aria-hidden="true"></i> Information
+            </a>
+          </li>
+        </ul>
+      </div>
