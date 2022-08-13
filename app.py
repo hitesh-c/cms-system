@@ -181,7 +181,7 @@ def update(id):
 
     currcomplaint = Complaint.query.filter_by(id=id).first()
     category = Category.query.filter_by(id=currcomplaint.categoryid).first()
-    category = category.descr
+    category = category.description
     return render_template('dashboarddetail.html', currcomplaint=currcomplaint, category=category)
 
 
