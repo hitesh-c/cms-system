@@ -8,7 +8,7 @@ import psycopg2
 app = Flask(__name__)
 
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/cms'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://madutnmzzjyshr:a2f664d87201164f403da708410da17cefc1366930172798370061335d3e535d@ec2-34-194-14-176.compute-1.amazonaws.com:5432/d4qf4jk65qmes2'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://lwovcefsafqauf:58aa40d11d6de75096f032da4538fc27279f61f11cb50ce4decce704b25e9909@ec2-52-73-155-171.compute-1.amazonaws.com:5432/debuoogt4kiqmi'
 
 
 app.config['SECRET_KEY'] = 'secretkey:):)'
